@@ -146,9 +146,34 @@ st.markdown(
     .stButton > button:hover, .stDownloadButton > button:hover {transform: translateY(-2px); filter: brightness(1.1);}
 
     .stTextArea textarea, .stTextInput input {
-        background: rgba(255,255,255,.06) !important; color: #f3f4f6 !important;
+        background: #151a35 !important; color: #f3f4f6 !important;
+        -webkit-text-fill-color: #f3f4f6 !important;
         border: 1px solid rgba(255,255,255,.15) !important; border-radius: 14px !important;
     }
+    .stTextArea textarea::placeholder, .stTextInput input::placeholder {
+        color: #6b7280 !important; -webkit-text-fill-color: #6b7280 !important;
+    }
+
+    /* Keep every widget dark and readable, even when the phone is in light mode */
+    [data-testid="stFileUploaderDropzone"] *, [data-testid="stFileUploader"] small,
+    [data-testid="stFileUploader"] span {color: #e5e7eb !important;}
+    [data-testid="stFileUploaderFile"], [data-testid="stFileUploaderFileData"] {
+        background: #151a35 !important; border-radius: 12px;
+    }
+    [data-testid="stFileUploaderFileName"] {color: #f3f4f6 !important;}
+    [data-testid="stStatusWidget"], [data-testid="stExpander"] details,
+    [data-testid="stExpander"] summary {
+        background: #151a35 !important; color: #e5e7eb !important;
+    }
+    [data-testid="stStatus"], [data-testid="stStatus"] * {color: #e5e7eb !important;}
+    [data-testid="stStatus"] details {background: #151a35 !important; border-radius: 14px;
+        border: 1px solid rgba(255,255,255,.12) !important;}
+    [data-testid="stAlert"] {border-radius: 14px;}
+    [data-testid="stAlertContainer"] {background: #151a35 !important;
+        border: 1px solid rgba(255,255,255,.14);}
+    [data-testid="stAlertContainer"] * {color: #e5e7eb !important;}
+    [data-testid="stTabs"] button {color: #e5e7eb !important;}
+    [data-testid="stDataFrame"] {border-radius: 14px; overflow: hidden;}
     [data-testid="stFileUploaderDropzone"] {
         background: rgba(255,255,255,.05); border: 2px dashed rgba(167,139,250,.6); border-radius: 18px;
     }
