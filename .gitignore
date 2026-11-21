@@ -1,0 +1,30 @@
+
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+
+# Environment variables and secrets
+.env
+.env.*
+
+# Streamlit secrets
+.streamlit/secrets.toml
+
+# Candidate data and generated results
+resumes/
+candidate_results.csv
+
+# IDE files
+.vscode/
+
+# Operating system files
+.DS_Store
+Thumbs.db
